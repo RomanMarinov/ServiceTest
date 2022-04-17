@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.MainActivity"
+    android:orientation="vertical">
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tablayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/holo_blue_light"
+        app:tabIndicatorColor="@color/white"
+        app:tabTextColor="@color/white"
+        />
+
+    <LinearLayout
+        android:id="@+id/ll_tab_1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <fragment
+            android:tag="map_fragment"
+            android:id="@+id/map_frag"
+            android:layout_width="match_parent"
+            tools:layout="@layout/fragment_async"
+            android:name="com.dev_marinov.myservicetest.activity.FragmentAsync"
+            android:layout_height="match_parent">
+        </fragment>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_tab_2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <fragment
+            android:tag="fragment_list_food"
+            android:id="@+id/frag_list_food"
+            android:layout_width="match_parent"
+            tools:layout="@layout/fragment_sync"
+            android:name="com.dev_marinov.myservicetest.activity.FragmentSync"
+            android:layout_height="match_parent">
+        </fragment>
+    </LinearLayout>
+
+</LinearLayout>
